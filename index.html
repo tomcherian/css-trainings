@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .my-button{
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            transition: background-color 1s ease;
+        }
+        .my-button:hover{
+            background-color: green;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* transition: property duration timing-function delay; */
+            /* transition: width 0.5s ease, height 0.5s ease-in; */
+            /* transition: all 0.3s ease-in-out; */
+            transition: background-color 0.5s ease-in-out
+        }
+        .box:hover {
+            /* width: 150px;
+            height: 150px; */
+            background-color: green;
+        }
+    </style>
+  </head>
+  <body>
+    Hi this is my new webpage
+    <button class="my-button">Hover</button>
+    <div class="box">
+        This is a sample box
+    </div>
+  </body>
+</html>
