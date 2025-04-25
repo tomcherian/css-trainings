@@ -5,37 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .my-button{
-            background-color: blue;
-            color: white;
-            padding: 10px 20px;
-            transition: background-color 1s ease;
-        }
-        .my-button:hover{
-            background-color: green;
-        }
+      .my-button {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        transition: background-color 1s ease;
+      }
+      .my-button:hover {
+        background-color: green;
+      }
 
-        .box{
-            width: 100px;
-            height: 100px;
-            background: red;
-            /* transition: property duration timing-function delay; */
-            /* transition: width 0.5s ease, height 0.5s ease-in; */
-            /* transition: all 0.3s ease-in-out; */
-            transition: background-color 0.5s ease-in-out
-        }
-        .box:hover {
-            /* width: 150px;
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        /* transition: property duration timing-function delay; */
+        /* transition: width 0.5s ease, height 0.5s ease-in; */
+        /* transition: all 0.3s ease-in-out; */
+        transition: background-color 0.5s ease-in-out;
+      }
+      .box:hover {
+        /* width: 150px;
             height: 150px; */
-            background-color: green;
-        }
+        background-color: green;
+      }
+
+      .card {
+        padding: 20px;
+        width: 100x;
+        background-color: lightblue;
+        /* transform: rotate(45deg);  */
+        transform: scale(1);
+        /* transition: background-color 0.3s, transform 0.3s ease-in-out; */
+        transition: transform 0.3s ease 0.3s, background-color 0.3s;
+      }
+
+      .card:hover {
+        /* transform: transslateX(10px); */
+        background-color: lightcoral;
+        /* transform: rotate(45deg);  */
+        transform: scale(1.1);
+        /* transform: skewX(20deg); */
+      }
+
+      .cb {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        transition: width 1s ease-in;
+      }
+
+      .cb.active {
+        width: 200px;
+      }
     </style>
   </head>
   <body>
     Hi this is my new webpage
     <button class="my-button">Hover</button>
-    <div class="box">
-        This is a sample box
-    </div>
+    <div class="box">This is a sample box</div>
+    <div class="card">Hover me</div>
+
+    <div class="cb"></div>
+    <button onclick="document.querySelector('.cb').classList.toggle('active')">
+      Toggle
+    </button>
   </body>
 </html>
